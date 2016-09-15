@@ -2,39 +2,26 @@
 
 Crysher est un outil en Python de chiffrage et de déchiffrage qui utilise le chiffrement AES-256 et compatible avec openssl aes-256-cbc.
 
+### Prerequisities
+
+Python2.7
+Crypto
+
+```
+pip install
+```
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisities
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Stay what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
 Explain how to run the automated tests for this system
+
+```
+python crysher.py -t 1000 
+```
 
 ### Break down into end to end tests
 
