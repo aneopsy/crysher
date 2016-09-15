@@ -28,7 +28,7 @@ def start():
     if int(choix) == 1:
         crypter()
     elif int(choix) == 2:
-        decrypted()
+        decrypter()
 
 def crypter():
     os.system("clear")
@@ -52,7 +52,7 @@ def crypter():
     backup.write(text)
     exit()
 
-def decrypted():
+def decrypter():
     os.system("clear")
     print(("*** {0}Decrypter{1} ***".format(bcolors.GREEN, bcolors.ENDC)))
     file = input("Filename > ")
