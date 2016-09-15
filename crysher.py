@@ -227,24 +227,6 @@ def _rundec(args):
 # ================================================================
 def _runtest(args):
     '''
-    Run a series of iteration where each iteration generates a random
-    password from 8-32 characters and random text from 20 to 256
-    characters. The encrypts and decrypts the random data. It then
-    compares the results to make sure that everything works correctly.
-
-    The test output looks like this:
-
-    $ crypt 2000
-    2000 of 2000 100.00%  15 139 2000    0
-    $ #     ^    ^        ^  ^   ^       ^
-    $ #     |    |        |  |   |       +-- num failed
-    $ #     |    |        |  |   +---------- num passed
-    $ #     |    |        |  +-------------- size of text for a test
-    $ #     |    |        +----------------- size of passphrase for a test
-    $ #     |    +-------------------------- percent completed
-    $ #     +------------------------------- total
-    # #+------------------------------------ current test
-
     @param args  The args parse arguments.
     '''
 
