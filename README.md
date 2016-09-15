@@ -1,54 +1,87 @@
-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
-2avaYK6N6ijQax7X2JIBRzCCa7t/N0OmdzqgwXk6q33IAgZlyClOl+WUieUm0MSe
-RDm1TlMy+0NwCr3Yd0KTolsN7LyFdYU4y3E66Lq+wdxS5vyOVQCwtD3mi6/WphIe
-cLsaroYJZhpuvVAmqI2eB7fmy7goop15ozzSN8oFLdkRp62zdJvw9jKC8/DJwrVm
-BGIn8qDMavYcY2S5dU8OxCeM0vz8tf0sktS5B5IqU3K/KlWa6nST+oiiSK07r45A
-D9jZow5npOFprRjpcaT8UeqIlb6ssR7kcXsOtcQN/dC/6N/zp3G591rRtMSaFM2t
-R2/UxuHiFqydzSWTVX+TfbYhRNydvsiMDE0KpsNaHlgveYW1V605QsKeFDTDeXO5
-H7Bvf9PurTTw6B/x5EsI6TgDG6hEM59cWtc+yN2y/oD9q+S8JG07n1KTFs4DKZz5
-xe4RDYhotrp+hm/k1Y9pDlDRZjpU+Lu2JNqxQemLaNE2ZFEdMxlzo8MYpBldyTHf
-cpsAZZQ2csw7Ysjy3Gx90uT82HF4a+Dlfqin8wfCVGU32sHa5A90uemqtDVJPqZR
-AP0+eS/2Fz0fC94qs/noyoF555yIAdVH9WWpJkEP5wQ+neINNfS7hkp5Cn1Zloi1
-yIo9WCZmU9jlLDHstM0o3zwWZZWKzbJ3EfK5E1G5mdwhwngO7x7brw323+KXnzE6
-QJxsBXSrFoIt7R2dgi2Wt2AoSvpIa4bVEcVlfP0CaaMLXPl4n0/otk1NI1J3bDu4
-M4PxHhUSaCN/fVLtbnpJ3mD+CLszJwuWCyAu+pdTjrENtrecf0nwGrcPtIgu2ayM
-QTmVd238+C3DhEG7aOkTBzFL911z/x53a6DOuOK5Xy7Csk1dbADuq5SRSayFeL+A
-0WQ78G+n4Howv5GZQGwtWQov2x0jZdzJFsgMgpp3PQc+qjk9V5Dl7UgCME4Nfqci
-CY6MN5TasoS4VSVePXaBCc8s40p8GdzftqkM2vLXkSY=
+# Crysher - Encryption & Decryption tool
+
+Crysher est un outil en Python de chiffrage et de déchiffrage qui utilise le chiffrement AES-256 et compatible avec openssl aes-256-cbc.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisities
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Stay what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* Dropwizard - Bla bla bla
+* Maven - Maybe
+* Atom - ergaerga
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# !python
+
 '''
 Implement openssl compatible AES-256 CBC mode encryption/decryption.
 
