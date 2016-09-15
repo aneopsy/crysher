@@ -1,6 +1,6 @@
 # Crysher - Encryption & Decryption tool
 
-Crysher est un outil en Python de chiffrage et de déchiffrage qui utilise le chiffrement AES-256 et compatible avec openssl aes-256-cbc.
+Crysher est un outil en Python de chiffrage et de déchiffrage qui utilise le chiffrement AES-256, compatible avec openssl aes-256-cbc.
 
 ### Prerequisities
 
@@ -8,7 +8,7 @@ Crysher est un outil en Python de chiffrage et de déchiffrage qui utilise le ch
 * Crypto
 
 ```
-pip install
+pip install Crypto
 ```
 
 ## Getting Started
@@ -20,17 +20,36 @@ usage: crysher.py [-h] [-d] [-e] [-i INPUT] [-m MSGDGST] [-o OUTPUT]
                   [-p PASSPHRASE] [-t TEST] [-v] [-V]
 ```
 
-## Running the tests
-
-Explain how to run the automated tests for this system
+Exemple pour chiffrer un fichier:
 
 ```
-python crysher.py -t 1000
+python crysher.py -e -i inpurt_file -o output_file
+```
+
+## Running the tests
+
+Lance une serie de cycle qui genere un password aleatoire entre 8-32 characteres et un text aleatoire entre 20-256 characteres.
+Le test consiste a chiffré et déchiffré des données aleatoires, et de comparer les résultats pour etre sure que tout fonctionne correctement.
+
+Le résultat du test ressembl à cela:
+
+2000 of 2000 100.00%  15 139 2000    0
+$ ^     ^    ^        ^  ^   ^       ^
+$ |     |    |        |  |   |       +-- nbr failed
+$ |     |    |        |  |   +---------- nbr passed
+$ |     |    |        |  +-------------- taille du fichier pour le test
+$ |     |    |        +----------------- taille du password pour le test
+$ |     |    +-------------------------- poucentage completé
+$ |     +------------------------------- total
+$ +------------------------------------- id du test
+
+```
+python crysher.py -t 2000
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Crysher est compatible sur:
 
 - Linux
 
