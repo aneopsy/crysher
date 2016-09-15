@@ -13,9 +13,9 @@ pip install Crypto
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ```
+$ python crysher.py
+
 usage: crysher.py [-h] [-d] [-e] [-i INPUT] [-m MSGDGST] [-o OUTPUT]
                   [-p PASSPHRASE] [-t TEST] [-v] [-V]
 ```
@@ -23,13 +23,13 @@ usage: crysher.py [-h] [-d] [-e] [-i INPUT] [-m MSGDGST] [-o OUTPUT]
 Exemple pour chiffrer un fichier:
 
 ```
-python crysher.py -e -i input_file -o output_file
+$ python crysher.py -e -i input_file -o output_file
 ```
 
 Exemple pour déchiffrer un fichier:
 
 ```
-python crysher.py -d -i input_file -o output_file
+$ python crysher.py -d -i input_file -o output_file
 ```
 
 Differentes option sont disponibles:
