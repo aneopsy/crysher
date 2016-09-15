@@ -263,8 +263,8 @@ def _runtest(args):
         else:
             passed += 1
 
-        output = '%*d of %d %6.2f%% %3d %3d %*d %*d %s' % (maxlen, i + 1,
-                                                           num,
+        output = '(%*d / %d) %6.2f%% %3d %3d %*d %*d %s' % (maxlen, i + 1,
+                                                            num,
                                                            100 * (i + 1) / num,
                                                            len(password),
                                                            len(plaintext),
@@ -305,72 +305,9 @@ def _cli_opts():
     mebase = '%s' % (os.path.basename(mepath))
 
     description = '''
-Implements encryption/decryption that is compatible with openssl
-AES-256 CBC mode.
-
-You can use it as follows:
-
-    EXAMPLE 1: %s -> %s (MD5)
-        $ # Encrypt and decrypt using %s.
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            %s -e -p secret | \\
-            %s -d -p secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 2: %s -> openssl (MD5)
-        $ # Encrypt using %s and decrypt using openssl.
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            %s -e -p secret | \\
-            openssl enc -d -aes-256-cbc -md md5 -base64 -salt -pass pass:secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 3: openssl -> %s (MD5)
-        $ # Encrypt using openssl and decrypt using %s
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            openssl enc -e -aes-256-cbc -md md5 -base64 -salt -pass pass:secret
-            %s -d -p secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 4: openssl -> openssl (MD5)
-        $ # Encrypt and decrypt using openssl
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            openssl enc -e -aes-256-cbc -md md5 -base64 -salt -pass pass:secret
-            openssl enc -d -aes-256-cbc -md md5 -base64 -salt -pass pass:secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 5: %s -> %s (SHA512)
-        $ # Encrypt and decrypt using %s.
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            %s -e -m sha512 -p secret | \\
-            %s -d -m sha512 -p secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 6: %s -> openssl (SHA512)
-        $ # Encrypt using %s and decrypt using openssl.
-        $ echo 'Lorem ipsum dolor sit amet' | \\
-            %s -e -m sha512 -p secret | \\
-            openssl enc -d -aes-256-cbc -md sha1=512 -base64 -salt -pass pass:secret
-        Lorem ipsum dolor sit amet
-
-    EXAMPLE 7:
-        $ # Run internal tests.
-        $ %s -t 2000
-        2000 of 2000 100.00%%  21 104 2000    0 md5
-        $ #     ^    ^        ^  ^   ^       ^ ^
-        $ #     |    |        |  |   |       | +- message digest
-        $ #     |    |        |  |   |       +--- num failed
-        $ #     |    |        |  |   +----------- num passed
-        $ #     |    |        |  +--------------- size of text for a test
-        $ #     |    |        +------------------ size of passphrase for a test
-        $ #     |    +--------------------------- percent completed
-        $ #     +-------------------------------- total
-        # #+------------------------------------- current test
-''' % (mebase, mebase, mebase, mebase,
-       mebase, mebase, mebase, mebase,
-       mebase, mebase, mebase, mebase,
-       mebase, mebase, mebase, mebase,
-       mebase, mebase, mebase, mebase,
-       )
+        Implements encryption/decryption that is compatible with openssl
+        AES-256 CBC mode.
+        ''' 
 
     parser = argparse.ArgumentParser(prog=mebase,
                                      formatter_class=argparse.RawDescriptionHelpFormatter,

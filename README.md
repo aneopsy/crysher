@@ -33,9 +33,9 @@ $ python crysher.py -d -i input_file -o output_file
 ```
 
 Differentes option sont disponibles:
-* -p
-* -m
-* -v
+* -p PASSPHRASE             defini un password
+* -m MSGDGST                defini un algorithme de Hashage
+* -v                        mode verbose
 
 ## Running the tests
 
@@ -44,15 +44,15 @@ Le test consiste a chiffré et déchiffré des données aleatoires, et de compar
 
 Le résultat du test ressemble à cela:
 ```
-2000 of 2000 100.00%  15 139 2000    0
-$ ^     ^    ^        ^  ^   ^       ^
-$ |     |    |        |  |   |       +-- nbr failed
-$ |     |    |        |  |   +---------- nbr passed
-$ |     |    |        |  +-------------- taille du fichier pour le test
-$ |     |    |        +----------------- taille du password pour le test
-$ |     |    +-------------------------- poucentage completé
-$ |     +------------------------------- total
-$ +------------------------------------- id du test
+(2000 / 2000) 100.00%  15 139 2000    0 md5
+$ ^      ^     ^        ^  ^   ^      ^ ^- hashage
+$ |      |     |        |  |   |      +--- nbr failed
+$ |      |     |        |  |   +---------- nbr passed
+$ |      |     |        |  +-------------- taille du fichier pour le test
+$ |      |     |        +----------------- taille du password pour le test
+$ |      |     +-------------------------- poucentage completé
+$ |      +-------------------------------- total
+$ +--------------------------------------- id du test
 
 ```
 
