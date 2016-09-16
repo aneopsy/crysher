@@ -19,9 +19,7 @@ from Crypto.Cipher import AES
 VERSION = '1.1'
 AUTHOR = "AneoPsy"
 
-# ================================================================
-# get_key_and_iv
-# ================================================================
+
 def get_key_and_iv(password, salt, klen=32, ilen=16, msgdgst='md5'):
     '''
     Derive the key and the IV from the given password and salt.
@@ -33,12 +31,7 @@ def get_key_and_iv(password, salt, klen=32, ilen=16, msgdgst='md5'):
     @param msgdgst   The message digest algorithm to use.
     '''
 
-    # equivalent to:
-    #   from hashlib import <mdi> as mdf
-    #   from hashlib import md5 as mdf
-    #   from hashlib import sha512 as mdf
     mdf = getattr(__import__('hashlib', fromlist=[msgdgst]), msgdgst)
-
     password = password.encode('ascii', 'ignore')  # convert to ASCII
 
     try:
@@ -55,9 +48,6 @@ def get_key_and_iv(password, salt, klen=32, ilen=16, msgdgst='md5'):
         return None, None
 
 
-# ================================================================
-# encrypt
-# ================================================================
 def encrypt(password, plaintext, chunkit=True, msgdgst='md5'):
     '''
     @param password  The password.
@@ -73,15 +63,12 @@ def encrypt(password, plaintext, chunkit=True, msgdgst='md5'):
     if key is None:
         return None
 
-    # PKCS#7 padding
     padding_len = 16 - (len(plaintext) % 16)
     padded_plaintext = plaintext + (chr(padding_len) * padding_len)
 
-    # Encrypt
     cipher = AES.new(key, AES.MODE_CBC, iv)
     ciphertext = cipher.encrypt(padded_plaintext)
 
-    # Make openssl compatible.
     openssl_ciphertext = 'Salted__' + salt + ciphertext
     b64 = base64.b64encode(openssl_ciphertext)
     if not chunkit:
@@ -93,9 +80,6 @@ def encrypt(password, plaintext, chunkit=True, msgdgst='md5'):
     return chunk(b64)
 
 
-# ================================================================
-# decrypt
-# ================================================================
 def decrypt(password, ciphertext, msgdgst='md5'):
     '''
     @param password   The password.
@@ -134,9 +118,6 @@ def decrypt(password, ciphertext, msgdgst='md5'):
     return plaintext
 
 
-# ================================================================
-# _open_ios
-# ================================================================
 def _open_ios(args):
     '''
     Open the IO files.
@@ -162,9 +143,6 @@ def _open_ios(args):
     return ifp, ofp
 
 
-# ================================================================
-# _close_ios
-# ================================================================
 def _close_ios(ifp, ofp):
     '''
     Close the IO files if necessary.
@@ -177,14 +155,10 @@ def _close_ios(ifp, ofp):
         ofp.close()
 
 
-# ================================================================
-# _runenc
-# ================================================================
 def _runenc(args):
     '''
     Encrypt data.
     '''
-
     if args.passphrase is None:
         while True:
             passphrase = getpass('Passphrase: ')
@@ -203,9 +177,6 @@ def _runenc(args):
     _close_ios(ifp, ofp)
 
 
-# ================================================================
-# _rundec
-# ================================================================
 def _rundec(args):
     '''
     Decrypt data.
@@ -222,14 +193,10 @@ def _rundec(args):
     _close_ios(ifp, ofp)
 
 
-# ================================================================
-# _runtest
-# ================================================================
 def _runtest(args):
     '''
     @param args  The args parse arguments.
     '''
-
     import string
     import random
     from random import randint
@@ -263,8 +230,8 @@ def _runtest(args):
         else:
             passed += 1
 
-        output = '(%*d / %d) %6.2f%% %3d %3d %*d %*d %s' % (maxlen, i + 1,
-                                                            num,
+        output = '%*d / %d| %6.2f%% %3d %3d %*d %*d %s' % (maxlen, i + 1,
+                                                           num,
                                                            100 * (i + 1) / num,
                                                            len(password),
                                                            len(plaintext),
@@ -293,9 +260,6 @@ def _runtest(args):
         ofp.close()
 
 
-# ================================================================
-# _cli_opts
-# ================================================================
 def _cli_opts():
     '''
     Parse command line options.
@@ -307,10 +271,10 @@ def _cli_opts():
     description = '''
         Implements encryption/decryption that is compatible with openssl
         AES-256 CBC mode.
-        ''' 
-
+        '''
+    desc = argparse.RawDescriptionHelpFormatter
     parser = argparse.ArgumentParser(prog=mebase,
-                                     formatter_class=argparse.RawDescriptionHelpFormatter,
+                                     formatter_class=desc,
                                      description=description,
                                      )
 
@@ -327,7 +291,8 @@ def _cli_opts():
     parser.add_argument('-m', '--msgdgst',
                         action='store',
                         default='md5',
-                        help='message digest (md5, sha, sha1, sha256, sha512), default is md5')
+                        help='message digest (md5, sha, sha1, sha256, sha512),\
+                              default is md5')
     parser.add_argument('-o', '--output',
                         action='store',
                         help='output file, default is stdout')
@@ -344,15 +309,12 @@ def _cli_opts():
                         help='the level of verbosity')
     parser.add_argument('-V', '--version',
                         action='version',
-                        version='%(prog)s v' + VERSION + " by " + AUTHOR )
+                        version='%(prog)s v' + VERSION + " by " + AUTHOR)
 
     args = parser.parse_args()
     return args
 
 
-# ================================================================
-# main
-# ================================================================
 def main():
     args = _cli_opts()
     if args.test > 0:
@@ -367,8 +329,5 @@ def main():
         _rundec(args)
 
 
-# ================================================================
-# MAIN
-# ================================================================
 if __name__ == "__main__":
     main()
